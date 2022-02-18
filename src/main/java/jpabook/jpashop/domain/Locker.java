@@ -9,7 +9,7 @@ import javax.persistence.OneToOne;
 public class Locker {
 
     @Id @GeneratedValue
-    private String id;
+    private Long id;
 
     private String name;
 
