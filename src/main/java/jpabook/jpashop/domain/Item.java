@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED) // 조인전략
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // 조인전략
 @DiscriminatorColumn
 public class Item {
 
