@@ -5,6 +5,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 public class Member extends BaseEntity {
 
@@ -20,7 +22,7 @@ public class Member extends BaseEntity {
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 
-    @OneToOne
+    @OneToOne(fetch = LAZY)
     @JoinColumn(name = "LOCKER_ID")
     private Locker locker;
 

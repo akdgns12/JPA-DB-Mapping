@@ -1,9 +1,8 @@
 package jpabook.jpashop.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+
+import static javax.persistence.FetchType.LAZY;
 
 @Entity
 public class Locker {
@@ -13,6 +12,6 @@ public class Locker {
 
     private String name;
 
-    @OneToOne(mappedBy = "locker")
+    @OneToOne(mappedBy = "locker", fetch = LAZY)
     private Member member;
 }
